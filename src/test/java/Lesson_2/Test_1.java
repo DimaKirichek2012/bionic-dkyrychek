@@ -10,6 +10,7 @@ public class Test_1 {
 
     @Test
     public void Example(){
+
         Assert.assertTrue(isPrime(5),"This numner isn't prime number");
     }
 
