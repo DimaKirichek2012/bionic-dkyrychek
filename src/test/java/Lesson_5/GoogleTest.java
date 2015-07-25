@@ -39,7 +39,8 @@ public class GoogleTest {
 
         searchField = driver.findElement(By.id("lst-ib"));
         searchField.sendKeys(searchText);
-        searchLink = driver.findElement(By.xpath(".//*[@id='rso']/div[2]/li[1]/div/h3/a"));
+        searchField.submit();
+        searchLink = driver.findElement(By.xpath(".//*[@id='rso']/div[2]/div[1]/div/h3/a"));
 
         assertTrue(searchLink.getText().toLowerCase().contains(searchText.toLowerCase()));
     }
