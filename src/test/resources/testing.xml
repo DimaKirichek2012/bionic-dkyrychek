@@ -5,6 +5,8 @@
     <test name="Nopackage" >
         <classes>
             <class name="Lesson_2.Test_1" />
+            <class name="Lesson_5.GoogleTest"/>
+            <class name="HomeTasks.HomeTask_1_Test"/>
         </classes>
     </test>
 
