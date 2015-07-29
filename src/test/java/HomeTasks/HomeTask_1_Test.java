@@ -50,6 +50,6 @@ public class HomeTask_1_Test {
     }
     @AfterTest
     public  void tearDown(){
-        driver.quit();
+        driver.quit();s
     }
 }
