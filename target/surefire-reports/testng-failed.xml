@@ -3,11 +3,19 @@
 <suite verbose="0" name="Failed suite [Suite1]">
   <test name="Nopackage(failed)">
     <classes>
-      <class name="Lesson_2.Test_1">
+      <class name="HomeTasks.HomeTask_1_Test">
         <methods>
-          <include name="Example"/>
+          <include name="stilysSearchTest"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- Lesson_2.Test_1 -->
+      </class> <!-- HomeTasks.HomeTask_1_Test -->
+      <class name="Lesson_5.GoogleTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="seleniumSearchTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Lesson_5.GoogleTest -->
     </classes>
   </test> <!-- Nopackage(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

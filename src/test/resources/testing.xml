@@ -4,9 +4,9 @@
 
     <test name="Nopackage" >
         <classes>
-            <class name="Lesson_2.Test_1" />
-            <class name="Lesson_5.GoogleTest"/>
-            <class name="HomeTasks.HomeTask_1_Test"/>
+            <class name="ui_tests.Lesson_2.Test_1" />
+            <class name="ui_tests.Lesson_5.GoogleTest"/>
+            <class name="ui_tests.HomeTasks.HomeTask_1_Test"/>
         </classes>
     </test>
 
