@@ -8,19 +8,18 @@ import org.openqa.selenium.WebElement;
 /**
  * Created by selenium on 29.07.2015.
  */
-public class GoogleSearchPage extends TestBase{
+public class GoogleSearchPage {
     private WebElement searchField;
     private WebElement searchLink;
     private WebDriver driver;
 
-    public GoogleSearchPage(WebDriver driver){
-        this.driver = driver;
-    }
 
+    public GoogleSearchPage(WebDriver driver){
+       this.driver = driver;
+    }
     public void open(String URL){
         driver.get(URL);
     }
-
     public void searchText(String searchText){
         searchField = driver.findElement(By.id("lst-ib"));
         searchField.sendKeys(searchText);
