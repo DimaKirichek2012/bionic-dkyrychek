@@ -7,7 +7,7 @@ import page.GoogleSearchPage;
 
 import java.lang.String;
 
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 
 /**

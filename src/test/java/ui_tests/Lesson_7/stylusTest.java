@@ -2,8 +2,9 @@ package ui_tests.Lesson_7;
 
 import core.TestBase;
 import org.testng.annotations.Test;
-import page.StylusSearchPage;
+import page.StylusPageObject;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 /**
@@ -18,7 +19,7 @@ public class stylusTest  extends TestBase{
     @Test
     public void stilysSearchTest(){
 
-        StylusSearchPage onStylusSearchPage = new StylusSearchPage(driver);
+        StylusPageObject onStylusSearchPage = new StylusPageObject(driver);
         onStylusSearchPage.open(stylusURL);
         onStylusSearchPage.EnterSearchText(searchText);
         onStylusSearchPage.ClickFindButton();
