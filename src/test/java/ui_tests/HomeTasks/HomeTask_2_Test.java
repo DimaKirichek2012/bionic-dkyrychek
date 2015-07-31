@@ -22,7 +22,7 @@ public class HomeTask_2_Test extends TestBase{
   //  private String iPhone
 
     @Test
-    public void stilysSearchTest(){
+    public void stylusSearchTest(){
 
         StylusPageObject stylusPageObject = new StylusPageObject(driver);
         stylusPageObject.open(stylusURL);
@@ -35,8 +35,7 @@ public class HomeTask_2_Test extends TestBase{
 
         assertTrue(driver.getTitle().contains("Apple iPhone"), "This page not Apple iPhone's");
 
-        stylusPageObject.setMinRange("20000");
-        stylusPageObject.setMaxRange("30000");
+        stylusPageObject.setRange("20000", "30000");
         stylusPageObject.submitRangeClick();
 
         assertTrue(driver.getTitle().contains("Apple iPhone 6 128GB Space Gray"), "Title not contains Apple iPhone 6 128GB Space Gray");

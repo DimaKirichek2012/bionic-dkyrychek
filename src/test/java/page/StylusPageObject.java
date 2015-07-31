@@ -24,18 +24,21 @@ public class StylusPageObject {
     private WebElement submitRange;
     private WebElement displayedResult;
 
-    public StylusPageObject(WebDriver driver){
+    public StylusPageObject(WebDriver driver) {
         this.driver = driver;
     }
-    public void open(String URL){
+
+    public void open(String URL) {
         driver.get(URL);
-     }
-    public void EnterSearchText(String searchElement){
-        searchField=driver.findElement(By.name("q"));
+    }
+
+    public void EnterSearchText(String searchElement) {
+        searchField = driver.findElement(By.name("q"));
         searchField.sendKeys(searchElement);
     }
+
     public void ClickFindButton() {
-        findButton=driver.findElement(By.xpath(".//*[@class='search']/form/input[2]"));
+        findButton = driver.findElement(By.xpath(".//*[@class='search']/form/input[2]"));
         findButton.click();
     }
 
@@ -43,36 +46,39 @@ public class StylusPageObject {
         searchLink = driver.findElement(By.xpath("//*[@class='product-grid']/li[2]/a/span"));
         return searchLink.getText();
     }
+
     public void appleStoreButtonClick() {
-        appleStoreButton=driver.findElement(By.cssSelector("#nav>li>a"));
+        appleStoreButton = driver.findElement(By.cssSelector("#nav>li>a"));
         appleStoreButton.click();
     }
+
     public void iPhoneButtonClick() {
-        iPhoneButton= driver.findElement(By.xpath(".//*[@id='content']/div[1]/ul/li[1]/a/span"));
+        iPhoneButton = driver.findElement(By.xpath(".//*[@id='content']/div[1]/ul/li[1]/a/span"));
         iPhoneButton.click();
     }
+
     public void iPhoneCheckBoxClick() {
-        iPhoneCheckBox=driver.findElement(By.xpath(".//*[@id='filter144']/li[6]/label/a"));
+        iPhoneCheckBox = driver.findElement(By.xpath(".//*[@id='filter144']/li[6]/label/a"));
         iPhoneCheckBox.click();
     }
-    public void setMinRange(String minRange) {
-        min=driver.findElement(By.id("min"));
+
+    public void setRange(String minRange, String maxRange) {
+        min = driver.findElement(By.id("min"));
         min.clear();
         min.sendKeys(minRange);
-    }
-    public void setMaxRange(String maxRange) {
-        max=driver.findElement(By.id("max"));
+        max = driver.findElement(By.id("max"));
         max.clear();
         max.sendKeys(maxRange);
     }
 
     public void submitRangeClick() {
-        submitRange=driver.findElement(By.xpath(".//*[@id='filter']/fieldset/div[1]/div[2]/input"));
+        submitRange = driver.findElement(By.xpath(".//*[@id='filter']/fieldset/div[1]/div[2]/input"));
         submitRange.click();
     }
+
     public String displayedResult() {
-        displayedResult=driver.findElement(By.xpath(".//*[@itemprop='name']"));
+        displayedResult = driver.findElement(By.xpath(".//*[@itemprop='name']"));
         return displayedResult.getText();
     }
-
 }
+
