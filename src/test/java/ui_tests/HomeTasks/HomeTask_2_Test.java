@@ -38,7 +38,7 @@ public class HomeTask_2_Test extends TestBase{
         stylusPageObject.setRange("20000", "30000");
         stylusPageObject.submitRangeClick();
 
-       // assertTrue(stylusPageObject.getTitle().contains("Apple iPhone 6 128GB Space Gray"), "Title not contains Apple iPhone 6 128GB Space Gray");
+      //  assertTrue(stylusPageObject.getTitle().contains("Apple iPhone 6 128GB Space Gray"), "Title not contains Apple iPhone 6 128GB Space Gray");
         assertTrue(stylusPageObject.displayedResult().contains("Apple iPhone 6 128GB Space Gray"),"Apple iPhone 6 128GB Space Gray not found");
 
     }
