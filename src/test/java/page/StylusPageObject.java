@@ -80,5 +80,11 @@ public class StylusPageObject {
         displayedResult = driver.findElement(By.xpath(".//*[@itemprop='name']"));
         return displayedResult.getText();
     }
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
+    }
+    public String getTitle() {
+        return driver.getTitle();
+    }
 }
 
