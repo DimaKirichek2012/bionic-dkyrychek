@@ -44,7 +44,7 @@ public class HomeTask_2_Test extends TestBase{
         appleiPhonePageObject.submitRangeClick();
 
         String title = appleiPhone6128GBPageObject.getTitle();
-     //   assertTrue(title.contains("Apple iPhone 6 128GB Space Gray"), "Title not contains Apple iPhone 6 128GB Space Gray. Value: "+title);
+        assertTrue(title.contains("Apple iPhone 6 128GB Space Gray"), "Title not contains Apple iPhone 6 128GB Space Gray. Value: "+title);
         assertTrue(appleiPhone6128GBPageObject.displayedResult().contains("Apple iPhone 6 128GB Space Gray"),"Apple iPhone 6 128GB Space Gray not found");
 
     }
