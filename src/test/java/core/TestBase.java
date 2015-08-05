@@ -15,7 +15,6 @@ import java.util.concurrent.TimeUnit;
  * Created by selenium on 29.07.2015.
  */
 public class TestBase{
-
     protected WebDriver driver;
     protected WebDriverWait webDriverWait;
 
@@ -27,13 +26,11 @@ public class TestBase{
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30,TimeUnit.SECONDS);
+
     }
 
     @AfterSuite
     public void tearDown(){
         driver.quit();
-    }
-
-
-
+     }
 }
