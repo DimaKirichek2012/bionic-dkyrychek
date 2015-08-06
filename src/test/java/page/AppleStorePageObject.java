@@ -7,8 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.util.concurrent.TimeUnit;
+
+
 
 
 /**
@@ -22,9 +22,9 @@ public class AppleStorePageObject  extends TestBase{
     public AppleStorePageObject(WebDriver driver) {
         this.driver = driver;
     }
-     public void iPhoneButtonClick() throws InterruptedException {
-         Thread.sleep(2000);
-      //  webDriverWait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(".//*[@id='content']/div[1]/ul/li[1]/a/span")));
+
+     public void iPhoneButtonClick(){
+        webDriverWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(".//*[@id='content']/div[1]/ul/li[1]/a")));
         iPhoneButton = driver.findElement(By.xpath(".//*[@id='content']/div[1]/ul/li[1]/a"));
         iPhoneButton.click();
     }
@@ -32,6 +32,7 @@ public class AppleStorePageObject  extends TestBase{
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
     }
+
     public String getTitle() {
         return driver.getTitle();
     }
