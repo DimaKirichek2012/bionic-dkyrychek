@@ -2,6 +2,8 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/ui_tests/HomeTasks/FinalTaskKyrychek.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/ui_tests/HomeTasks/Home_Task_3_Test.java" charset="UTF-8" />
     <file url="PROJECT" charset="windows-1251" />
   </component>
 </project>

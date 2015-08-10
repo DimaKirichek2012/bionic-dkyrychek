@@ -2,8 +2,7 @@ package ui_tests.Lesson_7;
 
 import core.TestBase;
 import org.testng.annotations.Test;
-import page.AppleStorePageObject;
-import page.BasePageObject;
+import page.StylusBasePage;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -20,12 +19,12 @@ public class stylusTest  extends TestBase{
     @Test
     public void stilysSearchTest(){
 
-        BasePageObject basePageObject = new BasePageObject(driver);
+        StylusBasePage basePageObject = new StylusBasePage(driver);
         basePageObject.open(stylusURL);
-        basePageObject.EnterSearchText(searchText);
-        basePageObject.ClickFindButton();
+        basePageObject.enterSearchText(searchText);
+        basePageObject.clickFindButton();
 
-        assertTrue(basePageObject.SearchLinkText().contains("Sony"));
+        assertTrue(basePageObject.searchLinkText().contains("Sony"));
     }
 
 }

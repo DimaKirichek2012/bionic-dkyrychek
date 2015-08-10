@@ -16,21 +16,20 @@ import java.util.concurrent.TimeUnit;
  */
 public class TestBase{
     protected WebDriver driver;
-    protected WebDriverWait webDriverWait;
+    protected static WebDriverWait webDriverWait;
 
     @BeforeSuite
     public void setUp() throws IOException{
         driver = WebDriverFactory.getWebDriver(TestData.BROWSER_NAME);
-        webDriverWait = new WebDriverWait(driver,50);
+        webDriverWait = new WebDriverWait(driver,10);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().setScriptTimeout(30,TimeUnit.SECONDS);
-
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
     }
 
     @AfterSuite
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
-     }
+    }
 }

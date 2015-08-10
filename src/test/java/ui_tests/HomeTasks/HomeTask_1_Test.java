@@ -1,5 +1,6 @@
 package ui_tests.HomeTasks;
 
+import core.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,26 +16,18 @@ import static org.testng.Assert.assertTrue;
 /**
  * Created by Hasler on 24.07.2015.
  */
-public class HomeTask_1_Test {
+public class HomeTask_1_Test extends TestBase {
 
-    private FirefoxDriver driver;
+
     private String searchElement;
     private WebElement searchField;
     private WebElement searchLink;
     private WebElement findButton;
 
-    @BeforeTest
-    public void setUp(){
-        searchElement = "Sony Z2";
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://stylus.com.ua");
-    }
-
     @Test
     public void stilysSearchTest(){
-
+        searchElement = "Sony Z2";
+        driver.get("http://stylus.com.ua");
         searchField=driver.findElement(By.name("q"));
         searchField.sendKeys(searchElement);
         findButton=driver.findElement(By.xpath(".//*[@id='header']/div[2]/div[2]/form/input[2]"));
@@ -46,8 +39,5 @@ public class HomeTask_1_Test {
 
 
     }
-    @AfterTest
-    public  void tearDown(){
-        driver.quit();
-    }
+
 }
