@@ -21,11 +21,11 @@ public class TestBase{
     @BeforeSuite
     public void setUp() throws IOException{
         driver = WebDriverFactory.getWebDriver(TestData.BROWSER_NAME);
-        webDriverWait = new WebDriverWait(driver,10);
+        webDriverWait = new WebDriverWait(driver,20);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
     }
 
     @AfterSuite

@@ -3,6 +3,7 @@ package ui_tests.HomeTasks;
 import core.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 import page.RozetkaBasePage;
@@ -12,7 +13,7 @@ import page.RozetkaVkCredentials;
 
 
 import static org.testng.Assert.assertEquals;
-
+import static org.testng.Assert.assertTrue;
 
 
 /**
@@ -44,10 +45,11 @@ public class Home_Task_3_Test extends TestBase {
         rozetkaVkCredentials.submitVkCredentials();
 
         driver.switchTo().window(winHandleBefore);
+        driver.navigate().refresh();
 
 
-        webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='header_user_menu_parent']/a']")));
-        WebElement firstAndLastName = driver.findElement(By.xpath(".//*[@id='header_user_menu_parent']/a']"));
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='header_user_menu_parent']/a")));
+        WebElement firstAndLastName = driver.findElement(By.xpath(".//*[@id='header_user_menu_parent']/a"));
         assertEquals(firstAndLastName.getText(),"Li Loi");
         firstAndLastName.click();
     }
