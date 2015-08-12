@@ -79,13 +79,4 @@ public class FinalTaskKyrychek extends TestBase {
         assertsRozetkaComparePage.assertAppleMacBookPro13OnComparePage();
         assertsRozetkaComparePage.assertAppleMacBookPro15OnComparePage();
     }
-
-
-
-
-
-
-
-
-
 }
