@@ -74,7 +74,7 @@ public class FinalTaskKyrychek extends TestBase {
         //15
         rozetkaAppleNotebookPage.compareSelectItems();
         //16
-
+        assertsRozetkaComparePage.assertComparePageOpen();
         //17
         assertsRozetkaComparePage.assertAppleMacBookPro13OnComparePage();
         assertsRozetkaComparePage.assertAppleMacBookPro15OnComparePage();

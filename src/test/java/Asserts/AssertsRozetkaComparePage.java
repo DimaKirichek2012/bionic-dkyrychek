@@ -27,6 +27,8 @@ public class AssertsRozetkaComparePage extends TestBase {
         WebElement appleMacBookPro13Compare = driver.findElement(By.xpath(".//*[@class='comparison-thead-row-first']/td[2]/div/div[2]/a"));
         assertTrue(appleMacBookPro13Compare.getText().contains("Apple MacBook Pro Retina 13\""));
     }
-
+    public  void assertComparePageOpen(){
+        assertTrue(driver.getCurrentUrl().contains("http://rozetka.com.ua/computers-notebooks/notebooks/comparison"));
+    }
 }
 

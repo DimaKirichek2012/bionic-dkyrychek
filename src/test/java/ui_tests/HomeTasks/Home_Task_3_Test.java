@@ -24,7 +24,7 @@ public class Home_Task_3_Test extends TestBase {
     private String rozetkaURL = "http://rozetka.com.ua/";
 
     @Test
-    public void StylusLoginTest() {
+    public void StylusLoginTest() throws InterruptedException {
 
         RozetkaBasePage rozetkaBasePage = new RozetkaBasePage(driver);
         RozetkaVkCredentials rozetkaVkCredentials = new RozetkaVkCredentials(driver);
@@ -34,17 +34,20 @@ public class Home_Task_3_Test extends TestBase {
 
         rozetkaBasePage.loginRozetka();
         rozetkaBasePage.loginWithVK();
-
+        Thread.sleep(2000);
         String winHandleBefore = driver.getWindowHandle();
 
         for (String handle : driver.getWindowHandles()) {
-            driver.switchTo().window(handle);
+            if(!handle.equalsIgnoreCase(winHandleBefore)) {
+                driver.switchTo().window(handle);
+            }
         }
 
         rozetkaVkCredentials.credentialsForVK("+380505027377", "qqqwww12");
         rozetkaVkCredentials.submitVkCredentials();
-
+        Thread.sleep(2000);
         driver.switchTo().window(winHandleBefore);
+        webDriverWait.until(ExpectedConditions.urlContains("http://rozetka.com.ua/"));
         driver.navigate().refresh();
 
 
@@ -52,7 +55,7 @@ public class Home_Task_3_Test extends TestBase {
         WebElement firstAndLastName = driver.findElement(By.xpath(".//*[@id='header_user_menu_parent']/a"));
         assertEquals(firstAndLastName.getText(),"Li Loi");
         firstAndLastName.click();
+        webDriverWait.until(ExpectedConditions.urlContains("my.rozetka.com.ua"));
+        assertEquals(driver.getCurrentUrl(), "https://my.rozetka.com.ua/", "Curent URL not https://my.rozetka.com.ua/");
     }
-
-
 }
