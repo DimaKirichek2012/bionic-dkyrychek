@@ -2,10 +2,7 @@ package ui_tests.HomeTasks;
 
 import Asserts.*;
 import core.TestBase;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import page.RozetkaAppleNotebookPage;
 import page.RozetkaBasePage;
@@ -13,7 +10,6 @@ import page.RozetkaNotebookPage;
 import page.RozetkaNotebooksAndComputersPage;
 
 import java.util.List;
-import static org.testng.Assert.*;
 
 
 /**
@@ -24,7 +20,7 @@ public class FinalTaskKyrychek extends TestBase {
     private String rozetkaURL = "http://rozetka.com.ua/";
 
     @Test
-    public void StylusLoginTest() {
+    public void RozetkaAppleMacBookTest() {
 
         RozetkaBasePage rozetkaBasePage = new RozetkaBasePage(driver);
         RozetkaNotebooksAndComputersPage rozetkaNotebooksAndComputersPage = new RozetkaNotebooksAndComputersPage(driver);
@@ -60,15 +56,15 @@ public class FinalTaskKyrychek extends TestBase {
         //8
         rozetkaAppleNotebookPage.descendingSort();
         //9
-        assertsRozetkaNotebookApplePage.assertAppleMacBookPro13OnPage();
+        assertsRozetkaNotebookApplePage.assertAppleMacBookPro13OnPage(rozetkaAppleNotebookPage.listOfNotebooks());
         //10
-        rozetkaAppleNotebookPage.appleMacBookPro13AddToCompare();
+        rozetkaAppleNotebookPage.appleMacbookPro13(rozetkaAppleNotebookPage.listOfNotebooks());
         //11
         assertsRozetkaNotebookApplePage.assertAppleMacBookPro13OnCompareList();
         //12
-        assertsRozetkaNotebookApplePage.assertAppleMacBookPro15OnPage();
+        assertsRozetkaNotebookApplePage.assertAppleMacBookPro15OnPage(rozetkaAppleNotebookPage.listOfNotebooks());
         //13
-        rozetkaAppleNotebookPage.appleMacBookPro15AddToCompare();
+        rozetkaAppleNotebookPage.appleMacbookPro15(rozetkaAppleNotebookPage.listOfNotebooks());
         //14
         assertsRozetkaNotebookApplePage.assertAppleMacBoocPro15OnCompareList();
         //15
