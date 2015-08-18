@@ -56,15 +56,15 @@ public class FinalTaskKyrychek extends TestBase {
         //8
         rozetkaAppleNotebookPage.descendingSort();
         //9
-        assertsRozetkaNotebookApplePage.assertAppleMacBookPro13OnPage(rozetkaAppleNotebookPage.listOfNotebooks());
+        assertsRozetkaNotebookApplePage.assertAppleMacBookPro13OnPage();
         //10
-        rozetkaAppleNotebookPage.appleMacbookPro13(rozetkaAppleNotebookPage.listOfNotebooks());
+        rozetkaAppleNotebookPage.appleMacbookPro13();
         //11
         assertsRozetkaNotebookApplePage.assertAppleMacBookPro13OnCompareList();
         //12
-        assertsRozetkaNotebookApplePage.assertAppleMacBookPro15OnPage(rozetkaAppleNotebookPage.listOfNotebooks());
+        assertsRozetkaNotebookApplePage.assertAppleMacBookPro15OnPage();
         //13
-        rozetkaAppleNotebookPage.appleMacbookPro15(rozetkaAppleNotebookPage.listOfNotebooks());
+        rozetkaAppleNotebookPage.appleMacbookPro15();
         //14
         assertsRozetkaNotebookApplePage.assertAppleMacBoocPro15OnCompareList();
         //15

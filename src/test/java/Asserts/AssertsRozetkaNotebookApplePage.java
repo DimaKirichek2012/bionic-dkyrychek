@@ -23,23 +23,11 @@ public class AssertsRozetkaNotebookApplePage extends TestBase {
         assertTrue(catalogComparison15.getText().contains("Apple MacBook Pro Retina 15\""));
     }
 
-   /* public void assertAppleMacBookPro15OnPage() {
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='block_with_goods']/div[1]/div[3]/div[1]/div/div/div/div[4]/a")));
-        WebElement appleMacBookPro15 = driver.findElement(By.xpath(".//*[@id='block_with_goods']/div[1]/div[3]/div[1]/div/div/div/div[4]/a"));
-        assertTrue(appleMacBookPro15.getText().contains("Apple MacBook Pro Retina 15\""));
-    }*/
-
     public void assertAppleMacBookPro13OnCompareList() {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='catalog-comparison']/div/ul/li/a[2]")));
         WebElement catalogComparison13 = driver.findElement(By.xpath(".//*[@id='catalog-comparison']/div/ul/li/a[2]"));
         assertTrue(catalogComparison13.getText().contains("Apple MacBook Pro Retina 13\""));
     }
-
-   /* public void assertAppleMacBookPro13OnPage() {
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='block_with_goods']/div[1]/div[4]/div[1]/div/div/div/div[4]/a")));
-        WebElement appleMacBookPro13 = driver.findElement(By.xpath(".//*[@id='block_with_goods']/div[1]/div[4]/div[1]/div/div/div/div[4]/a"));
-        assertTrue(appleMacBookPro13.getText().contains("Apple MacBook Pro Retina 13\""));
-    }*/
 
     public void assertNotebookApplePageOpened() {
         webDriverWait.until(ExpectedConditions.urlContains("http://rozetka.com.ua/notebooks/apple"));
@@ -50,22 +38,14 @@ public class AssertsRozetkaNotebookApplePage extends TestBase {
             assertTrue(type.isDisplayed());
         }
     }
-    public void assertAppleMacBookPro13OnPage(List<WebElement> webElementList){
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='block_with_goods']/div[1]/div")));
-        for (WebElement appleBook13:webElementList){
-            if (appleBook13.getText().contains("Apple MacBook Pro Retina 13\"")){
-                assertTrue(appleBook13.getText().contains("Apple MacBook Pro Retina 13\""));
-                break;
-            }
-        }
+    public void assertAppleMacBookPro13OnPage(){
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(), 'Z0QP000X6')]")));
+        WebElement appleMacBookPro13 = driver.findElement(By.xpath("//a[contains(text(), 'Z0QP000X6')]"));
+        assertTrue(appleMacBookPro13.getText().contains("Z0QP000X6"));
     }
-    public void assertAppleMacBookPro15OnPage(List<WebElement> webElementList){
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='block_with_goods']/div[1]/div")));
-        for (WebElement appleBook15:webElementList){
-            if (appleBook15.getText().contains("Apple MacBook Pro Retina 15\"")){
-                assertTrue(appleBook15.getText().contains("Apple MacBook Pro Retina 15\""));
-                break;
-            }
-        }
+    public void assertAppleMacBookPro15OnPage(){
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(), 'MGXA2UA/A')]")));
+        WebElement appleMacBookPro15 = driver.findElement(By.xpath("//a[contains(text(), 'MGXA2UA/A')]"));
+        assertTrue(appleMacBookPro15.getText().contains("MGXA2UA/A"));
     }
 }

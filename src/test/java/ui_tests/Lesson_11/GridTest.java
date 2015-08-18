@@ -46,7 +46,7 @@ public class GridTest {
 
         //      Version
         //caps.setVersion(version);
-        driver = new RemoteWebDriver(new URL("http://192.168.10.87:4444/wd/hub"),caps);
+        driver = new RemoteWebDriver(new URL("http://192.168.0.105:4444/wd/hub"),caps);
         driver.get(url);
     }
     @Test(description="Test Bmi Calculator")
